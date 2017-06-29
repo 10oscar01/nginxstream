@@ -1,0 +1,21 @@
+<head>
+  <link href="http://vjs.zencdn.net/6.1.0/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+<script>
+var player = videojs(document.getElementById("videos"), 
+{ "techOrder": ["hls","flash","html5"] }, function () {
+});
+</script>
+  
+  </head>
+
+<body>
+  <video id="videos" width="100%" height="481px" controls data-setup="" 
+class="video-js vjs-default-skin">
+     <source src="http://oscarhuang.ddns.net:8888/hls/index.m3u8" type="application/x-mpegURL">
+</video>
+
+  <script src="http://vjs.zencdn.net/6.1.0/video.js"></script>
+</body>

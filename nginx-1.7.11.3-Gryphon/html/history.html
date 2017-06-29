@@ -1,0 +1,68 @@
+<html>
+<head>
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+   <script src="http://vjs.zencdn.net/c/video.js"></script>
+</head>
+<script language="JavaScript"></script>
+</head>
+<script>
+
+	var x = document.getElementById("mySelect");
+
+
+</script>
+<body>
+	<script>
+	
+
+	</script>
+	
+	
+	
+	<select name ="a[]" muitiple>
+  		<option value="2017062515-5~201706251515.flv">2017062515-5~201706251515.flv</option>
+  		<option value="201706251424~201706251444.flv">201706251424~201706251444.flv</option>
+  		<option value="201706251439~201706251441.flv">201706251439~201706251441.flv</option>
+  		<option value="201706251440~201706251442.flv">201706251440~201706251442.flv</option>
+  		<option value="201706251515~201706251535.flv">201706251440~201706251442.flv</option>
+	</select>
+	<button type="button" class="add">PLAY</button>
+	<div style= "display:none"><select name="b[]" multiple></select></div>
+
+	<script>
+	$(function(){
+
+  $('.add').on( 'click', function(e) 
+  {
+    var $cSel = $('select[name="a[]"]');
+  	var $cSelOper = $('select[name="b[]"]');
+    var $options = $("option:selected", $cSel).clone();
+
+    $cSelOper.append($options);
+  	$("option", $cSelOper).each(function() 
+  	{
+  	  $("#video").load(location.href + " #video");
+    });
+
+  });
+
+});
+
+	</script>
+
+
+	<div id = "video">
+
+
+	
+
+		<video id="video1" class="video-js vjs-default-skin" width="640" height="480"
+        data-setup='{"controls" : true, "autoplay" : true, "preload" : "auto"}'>
+        <source src="video/origin.flv" type="video/x-flv">
+
+	</video>
+</div>
+</body>
+</html>
